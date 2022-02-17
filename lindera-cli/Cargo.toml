@@ -19,7 +19,7 @@ license = "MIT"
 
 [dependencies]
 anyhow = "1.0"
-clap = "2.33"
+clap = "3.1"
 stringreader = "0.1"
 
 lindera = { version = "0.8.0", path = "../lindera" }
