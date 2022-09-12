@@ -22,7 +22,7 @@ jobs:
           profile: minimal
           toolchain: ${{ matrix.toolchain }}
           override: true
-      - uses: actions-rs/cargo@v1
+      - uses: actions-rs/cargo@v1.0.3
         with:
           command: check
 
@@ -41,7 +41,7 @@ jobs:
           profile: minimal
           toolchain: ${{ matrix.toolchain }}
           override: true
-      - uses: actions-rs/cargo@v1
+      - uses: actions-rs/cargo@v1.0.3
         with:
           command: test
           args: --features "${{ matrix.features }}"
@@ -61,7 +61,7 @@ jobs:
           toolchain: ${{ matrix.toolchain }}
           override: true
       - run: rustup component add rustfmt
-      - uses: actions-rs/cargo@v1
+      - uses: actions-rs/cargo@v1.0.3
         with:
           command: fmt
           args: --all -- --check
